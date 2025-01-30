@@ -1,15 +1,12 @@
-
+// 'use client'
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
-
-
 import createClient from "@sanity/client"; // Import the sanity client
 import ProductInfo from "@/components/ProductInfo";
 import MidHeader from "@/components/midHeader";
 import Fotter from "@/components/Fotter";
 import Feature from "@/components/Feature";
-
 
 
 
@@ -43,6 +40,12 @@ export default async function ProductDetail({ params }: ProductDetailProps) {
     }`,
     { _id: params.id }
   );
+  
+  // First Method
+  // const fetchData = await fetch(
+    //   `https://677ebc1f94bde1c1252d4a04.mockapi.io/Testing/${params.id}`
+    // );
+    // const data: Product = await fetchData.json();
 
 
   
